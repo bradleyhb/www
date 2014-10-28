@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <base href="/web-scraper/"></base>
+    <meta charset="UTF-8">
+    <title>Web Scraper Client</title>
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link type="text/css" rel="stylesheet" href="styles/css/futura-pt.css">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="styles/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<!--     <div class="jumbotron">     
+        <a ng-href="/web-scraper/">Home</a>
+        <a ng-href="/web-scraper/dashboard">Dashboard</a>
+    </div>
+     -->
+
+    <!-- <div id="container-image"> -->
+        <div class="col-md-12" role="main">
+            <div ng-view></div>
+
+         
+        </div>
+
+    <!-- </div> -->
+
+        
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <!-- VENDORS -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.19.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src="vendors/jquery-1.11.1.min.js"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/ng-infinite-scroll.min.js"></script>
+    <script src="vendors/angular-route.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    <!-- APP -->
+    <script src="app/app.js"></script>
+    <script src="app/route.js"></script>
+    
+    <!-- FACTORIES -->
+    <script src="app/factories/helperFactory.js"></script>
+    <script src="app/factories/awsFactory.js"></script>
+    <script src="app/factories/firebaseFactory.js"></script>
+
+    <!-- MODULES -->
+    <script src="app/modules/client/clientController.js"></script>
+    <script src="app/modules/artwork/artworkController.js"></script>
+
+</body>
+<!-- <footer>Someone famous in <cite title="Source Title">Source Title</cite>            
+    <div class="jumbotron">     
+                 <a ng-href="/web-scraper/">Home</a>
+                <a ng-href="/web-scraper/dashboard">Dashboard</a>
+    </div>
+</footer> --> 
+
+</html>

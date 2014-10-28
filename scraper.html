@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>WEB SCRAPER</h1>
+    <table ng-controller="WebScraperController as webscraper">
+        <thead>
+            <tr>
+                <th>ARTIST</th>
+                <th>Thumbnail</th>
+                <th>Featured Image</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in webscraper.itemScrape track by $index">
+                <td>{{ item.artist }}</td>
+                <td>
+                    <img ng-src="{{ item.thumbnail.imgUri }}" /><br>
+                    <p>Width: {{ item.thumbnail.imgWidth }}</p>
+                    <p>Height: {{ item.thumbnail.imgHeight }}</p>
+                </td>
+                <td>
+                    <img ng-src="{{ item.artwork.imgUri }}" /><br>
+                    <p>Width: {{ item.artwork.imgWidth }}</p>
+                    <p>Height: {{ item.artwork.imgHeight }}</p>
+                    <p>Has many artworks? {{ item.artwork.isMany }}</p>
+                </td>
+                <td>{{ item.location }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- VENDORS -->
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src="vendors/jquery-1.11.1.min.js"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/ng-infinite-scroll.min.js"></script>
+
+    <!-- APP -->
+    <script src="app/app.js"></script>
+
+    <!-- FACTORIES -->
+    <script src="app/factories/helperFactory.js"></script>
+    <script src="app/factories/firebaseFactory.js"></script>
+
+    <!-- MODULES -->
+    <script src="app/modules/webscraper/webscraperController.js"></script>
+</body>
+</html>

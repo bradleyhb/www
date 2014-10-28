@@ -1,0 +1,55 @@
+
+<div class="row"> 
+	<div class="jumbotron">     
+		 <a ng-href="/web-scraper/">Home</a>
+	    <!-- <a ng-href="/web-scraper/">Home</a>
+	    <a ng-href="/web-scraper/dashboard">Dashboard</a> -->
+
+	</div>
+    
+
+	<div class="col-xs-12 col-md-8 col-md-offset-2" role="main">
+		<div class="full-image-wrapper">
+            <div class="buttons-group">
+                <div class="hexagon">
+                	<a href=""><i class="fa fa-heart"></i></a>
+                </div>
+                <div class="hexagon">
+                	<a href=""><i class="fa fa-share"></i></a>
+                </div>
+                <div class="hexagon">
+                	<a href=""><i class="fa fa-plus"></i></a>
+                </div>
+                <div class="hexagon">
+                	<a href=""><i class="fa fa-wechat"></i></a>
+                </div>
+            </div>
+            <div class="button-right-more">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">More</button>
+			</div>
+			<img class="image-thumbnail img-responsive" ng-src="{{artwork.items[artwork.imgIdx]['artwork']['imgUri']}}"/>
+			
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Image Title</h4>
+      </div>
+
+      <div class="modal-body">
+        <p>Definition</p>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+
+    </div>
+  </div>
+</div>

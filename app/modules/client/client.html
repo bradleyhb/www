@@ -1,0 +1,39 @@
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 search-field">
+        <label class="search-label">Search</label>
+        <input class="search-input" placeholder="input a city, artist name, or hashtag" type="text" ng-model="client.search" ng-change="client.retrieveData()">
+    </div>
+</div>
+
+
+<div class="col-md-8 col-md-offset-2" role="main">
+    <div ng-hide="client.items.length > 0">
+        <td colspan="4">Getting contents...</td>
+    </div>
+    <div infinite-scroll='client.retrieveData()' infinite-scroll-distance='2'>
+        <div class="col-xs-12 col-md-6 col-lg-4" ng-repeat="item in client.items | filter:client.search">
+            <div class="thumbnail container-thumbnail" ng-hide="client.items == null">
+                <a ng-href="/web-scraper/artwork/{{ $index }}"><img  ng-if= "item.thumbnail.imgUri != '' " 
+                class="media-object thumbnail-image-list" ng-src="{{ item.thumbnail.imgUri }}"/>
+                <img  ng-if= "item.thumbnail.imgUri == null" 
+                class="media-object"  data-src="holder.js/100%x180"/>
+                
+                <div class="details">
+                    <h4 ng-if="item.artist ==''">No Artist</h4><h4>{{ item.artist }}</h4>
+                    <small>{{ item.location }}</small>
+                </div>
+                </a> 
+            </div>
+          <!--   <p>Width: {{ item.thumbnail.imgWidth }}</p>
+            <p>Height: {{ item.thumbnail.imgHeight }}</p>
+            <p>{{ item.location }}</p> -->
+        </div>
+    </div>  
+</div>
+
+<!--  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="...">
+    </a>
+  </div> -->

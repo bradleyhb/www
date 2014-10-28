@@ -1,0 +1,188 @@
+
+/*Landing Page*/
+  .search-input{
+  	width: 100%
+  }	
+  .search-wrapper{
+	margin-top: 50%;
+  }
+/*
+  .search-input{
+  	position: relative;
+	width: 100%;
+	padding: 8px 30px 8px 0;
+	letter-spacing: -1px;
+	font-family: "futura-pt", "Avenir Next", "Avenir", "Futura", "Trebuchet MS", sans-serif;
+	font-weight: 300;
+	font-size: 48px;
+	color: #e8e8ea;
+	background: none;
+	border: none;
+  }*/
+
+ .thumbnail.container-thumbnail{
+ 	padding: 0px;
+ 	border: 0px; 
+ 	border-radius: 0px;	
+ 	margin-bottom: 25px;
+ 	  /*outline: 0;*/
+ 	  position: relative;
+ 	  overflow: hidden;
+ 	  /*background-color: #1d1d1f;*/
+
+ }
+
+ .thumbnail.container-thumbnail a > img {
+ 	margin-left: 0;
+}
+
+
+
+.details{
+	position: absolute;
+	margin-top: -125px;
+	margin-left: -150px;
+	color: #FFF;
+	font-weight: 700;
+	width: 79%;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 5px 10px 5px 10px;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+
+	    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+}
+
+
+ .thumbnail.container-thumbnail:hover > a > .details, 
+ .thumbnail.container-thumbnail:hover > a > img {
+ 	margin-left: 0px;
+ 	opacity: 1;
+
+ 	opacity: 0.7;
+	filter: alpha(opacity=70);
+
+
+ }
+
+ .thumbnail.container-thumbnail > a > img:hover{
+  	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+
+ .thumbnail.container-thumbnail >  a  > img{
+  	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/**/
+#artpage{
+
+	margin-top: auto;
+	margin-left: auto;
+}
+
+
+/******************DASHBOARD DIALOG*********************/
+body {
+    font-family: "futura-pt", "Avenir Next", "Avenir", "Futura", "Trebuchet MS", sans-serif;
+	/*background-color: #1d1d1f !important;*/
+	background-size: 100% auto;
+	color: #e8e8ea;
+	left: 0;
+	right: 0;
+}
+
+.search-field {
+    position: relative;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #414143;
+
+    -webkit-animation: fadeUp 400ms cubic-bezier(0.5, 0.2, 0.3, 1);
+    animation: fadeUp 400ms cubic-bezier(0.5, 0.2, 0.3, 1);
+
+    margin-top: 50px;
+}
+
+.search-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #808082;
+}
+
+.search-input {
+    position: relative;
+    width: 100%;
+    padding: 8px 30px 8px 0;
+    letter-spacing: -1px;
+    font-weight: 300;
+    font-family: "futura-pt", "Avenir Next", "Avenir", "Futura", "Trebuchet MS", sans-serif;
+    font-size: 48px;
+    color: #e8e8ea;
+    background: none;
+    border: none;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-input::-webkit-input-placeholder {
+    font-family: "futura-pt", "Avenir Next", "Avenir", "Futura", "Trebuchet MS", sans-serif;
+    font-size: 48px;
+    color: #444446;
+    -webkit-font-smoothing: antialiased;
+}
+
+.search-input ::-moz-input-placeholder {
+    font-family: "futura-pt", "Avenir Next", "Avenir", "Futura", "Trebuchet MS", sans-serif;
+    font-size: 48px;
+    color: #444446;
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-ms-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -ms-transform: translateY(20px);
+        transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+        transform: translateY(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
