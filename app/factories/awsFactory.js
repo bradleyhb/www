@@ -14,8 +14,8 @@
 
         /** AWS CONFIG **/
         var creds = {
-                secretAccessKey: 'W/xjubA3Uz6CZZNZisqGXvBYlneDOCSocnRiw/LL',
-                accessKeyId: 'AKIAIEWGYPH26LKZJSBA',
+                secretAccessKey: '',
+                accessKeyId: '',
                 endpoint: 's3-us-west-2.amazonaws.com',
                 region: 'us-west-1'
             },

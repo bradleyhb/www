@@ -5,13 +5,12 @@
 		.module('myApp')
 		.config(RouteConfig);
 
-		RouteConfig.$inject = ['$routeProvider', '$locationProvider'];
+		RouteConfig.$inject = ['$routeProvider'];
 
-		function RouteConfig($routeProvider, $locationProvider){
+		function RouteConfig($routeProvider){
 			var templateDir = 'app/modules/';
 			
-			$locationProvider.html5Mode(true);
-
+			// $locationProvider.html5Mode(true);
 			$routeProvider
 				.when('/', {
 					templateUrl: templateDir + 'client/client.Html',

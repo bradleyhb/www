@@ -46,7 +46,9 @@
          * Update $rootScope views
          */
         function rootScopeDigest() {
-            $rootScope.$digest();
+            if ($rootScope.$root.$$phase != '$apply' && $rootScope.$root.$$phase != '$digest') {
+                $rootScope.$apply();          
+            }
         }
 
         /**

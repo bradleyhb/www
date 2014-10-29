@@ -37,10 +37,10 @@
                 isPollRunning = true;
                 var prevStartAt = startAt;
                 var x = 0;
-
+                console.log('asd');
                 FirebaseFactory.getData(startAt, limit, function(response) {
                     startAt = response.hc.path.m[0];
-                    
+                    console.log(response.val());
                     if (prevStartAt != startAt) {
                         vm.items.push(response.val());
                         HelperFactory.rootScopeDigest();

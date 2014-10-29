@@ -16,6 +16,7 @@
         var targetUrl = 'http://www.unurth.com/designs/feed/index-pagination.php';
         var row = 0;
         var vm = this;
+        var imageIDkey = 0;
 
         /**
          * VARIABLES
@@ -52,7 +53,7 @@
                 if (typeof data.artwork.featuredImgUri !== 'undefined') {
                     fileName = data.artwork.featuredImgUri.split('/');
 
-                    imgUri = fileName[fileName.length - 1];
+                    imgUri = fileName[fileName.length - 1] + '_' + (imageIDkey++);
 
                     $.ajax({
                         url: 'uploader.php',
@@ -80,8 +81,7 @@
                     location: data.location
                 };
 
-                vm.itemScrape.push(itemEntry);
-                
+                // vm.itemScrape.push(itemEntry);
                 HelperFactory.rootScopeDigest();
 
                 FirebaseFactory.pushData(itemEntry);
@@ -106,10 +106,12 @@
                     var dataDOM = $(HelperFactory.htmlStringToDom(response)).children().find('.project_content');
                     var itemArtist = dataDOM.find('b:contains("artist")').next().html();
                     
+
                     var content = dataDOM.contents().filter(function() {
                             return this.nodeType !== 3 || (this.nodeType === 3 && this.data.trim() != '');
                         });
                     
+                    // console.log(content);
                     var findLoc = dataDOM.find('b:contains("location")'),
                         r = 0;
 
@@ -142,6 +144,8 @@
                         location: itemLocation
                     };
 
+                    console.log(itemEntry);
+
                     getArtworkInfo(itemEntry);
                 }
             });
@@ -157,6 +161,8 @@
          *     (Object) data - The artist data.
          */
         function getThumbnail(data) {
+
+            // console.log(data);
             $('<img/>').attr('src', data.imgUri).load(function() {
 
                 var item = {
@@ -167,6 +173,8 @@
                         imgHeight: this.height
                     }
                 };
+
+
 
                 getArtistInfo(item);
             });
@@ -198,8 +206,6 @@
                     // Return:
                     // data = HTML String
                     success: function(data) {
-                        // console.log(data); 
-                        
                         // This means it's the end of the page
                         // So let's stop requesting
                         if (data.length === 0) {
@@ -212,6 +218,9 @@
                                     artistUri: $(this).children('a').attr('href'),
                                     imgUri: $(this).children().find('img').attr('src')
                                 };
+
+
+                                // console.log(item);
 
                                 getThumbnail(item);
                             });
