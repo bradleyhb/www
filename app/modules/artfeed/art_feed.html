@@ -1,0 +1,8 @@
+  Heelllooo
+  <!-- {{artfeed.items}} -->
+<div infinite-scroll='artfeed.retrieveData()' infinite-scroll-distance='2'>
+	<div ng-repeat="item in artfeed.items">
+		<img class="media-object thumbnail-image-list" ng-src="{{ item.artwork.imgUri }}"/>
+
+	</div>
+</div>

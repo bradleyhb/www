@@ -1,6 +1,6 @@
 {
-  "firebase": "torid-inferno-6131",
-  "public": ".",
+  "firebase": "crackling-inferno-7542",
+  "public": "../www",
   "ignore": [
     "firebase.json",
     "**/.*",

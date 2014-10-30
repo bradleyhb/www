@@ -10,7 +10,7 @@
 
     function FirebaseFactory() {
         
-        var dataRef = new Firebase('https://torid-inferno-6131.firebaseIO.com');
+        var dataRef = new Firebase('https://crackling-inferno-7542.firebaseIO.com');
 
         return {
             pushData: pushData,
