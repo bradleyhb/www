@@ -20,7 +20,7 @@
             <div infinite-scroll='client.retrieveData()' infinite-scroll-distance='2'>
                 <div class="col-xs-12 col-md-6 col-lg-4" ng-repeat="item in client.items | filter:client.search">
                     <div class="thumbnail container-thumbnail" ng-hide="client.items == null">
-                        <a ng-href="/www/#/artwork/{{ $index }}"><img  ng-if= "item.thumbnail.imgUri != '' " 
+                        <a ng-href="#/artwork/{{ $index }}"><img  ng-if= "item.thumbnail.imgUri != '' " 
                         class="media-object thumbnail-image-list" ng-src="{{ item.thumbnail.imgUri }}"/>
                         <img  ng-if= "item.thumbnail.imgUri == null" 
                         class="media-object"  data-src="holder.js/100%x180"/>
