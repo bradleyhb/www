@@ -212,7 +212,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #808082;
-    text-shadow: 0px -1px #000;
+    text-shadow: 1px -1px #000;
 }
 
 .search-input {
@@ -283,4 +283,16 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+
+/*ART FEED */
+
+/*.horizontal-images{
+  overflow-x: auto;
+  overflow-y: hidden;
+}*/
+
+#carousel-example-generic{
+  height: 100vh;
 }

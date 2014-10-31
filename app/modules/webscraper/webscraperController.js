@@ -68,6 +68,8 @@
                     imgUri = fileName[fileName.length - 1];
                 }
 
+                
+
                 var itemEntry = {
                     artistUri: data.artistUri,
                     artist: data.artist,

@@ -40,6 +40,22 @@
 	            }
        		}
 
+
+       	$('.carousel').carousel();
+			$(document).on('slide.bs.carousel', '.carousel', function () {
+				vm.retrieveData();
+			});
 		};
+
+	$(window).bind('mousewheel', function(event) {
+	    if (event.originalEvent.wheelDelta >= 0) {
+	         $('.carousel').carousel("prev");
+	    }
+	    else {     
+	         $('.carousel').carousel("next");
+	    }
+	});
+
+
 
 })();

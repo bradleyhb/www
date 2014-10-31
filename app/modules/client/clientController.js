@@ -50,5 +50,10 @@
                 });
             }
         }
+
+
+            $('#artfeed-a').click(function(){
+                $('body').css('overflow-y', 'hidden');
+            });
     }
 })();

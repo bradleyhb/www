@@ -1,8 +1,38 @@
-  Heelllooo
-  <!-- {{artfeed.items}} -->
+<!-- <div class="artfeed">
 <div infinite-scroll='artfeed.retrieveData()' infinite-scroll-distance='2'>
-	<div ng-repeat="item in artfeed.items">
-		<img class="media-object thumbnail-image-list" ng-src="{{ item.artwork.imgUri }}"/>
-
+	<div class="horizontal-images">
+		<ul>
+			<li class="try" ng-repeat="item in artfeed.items">
+				<img class="media-object thumbnail-image-list" ng-src="{{ item.artwork.imgUri }}"/>
+			</li>
+		</ul>
 	</div>
+</div>
+</div> -->
+
+<!-- <div infinite-scroll='artfeed.retrieveData()' infinite-scroll-distance='2'>
+	<div class="item" ng-repeat="item in artfeed.items">
+	  <img class="media-object thumbnail-image-list" ng-src="{{ item.artwork.imgUri }}"/>
+	</div>
+</div>
+ -->
+
+<div id="carousel-example-generic" class="carousel slide artfeed" data-ride="carousel">
+  <!-- Indicators -->
+<!--   <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide="prev"></li>
+    <li data-target="#carousel-example-generic" data-slide="next"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" infinite-scroll='artfeed.retrieveData()' infinite-scroll-distance='2'>
+    <div class="item {{$index == 0 ? 'active' : ''}}" ng-repeat="item in artfeed.items">
+      <img class="media-object thumbnail-image-list" ng-src="{{ item.artwork.imgUri }}">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    ...
+  </div>
 </div>
